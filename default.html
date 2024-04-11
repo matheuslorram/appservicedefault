@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Primeira Página Web</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        /* Estilos do cabeçalho */
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Estilos do formulário de login */
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #1e7e34;
+        }
+        /* Estilos dos botões de navegação */
+        .nav-buttons {
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos do rodapé */
+        .footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bem-vindo à minha primeira página web!</h1>
+    </div>
+    <div class="container">
+        <p>Esta é uma página web simples para demonstrar os fundamentos do HTML.</p>
+
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+
+        <h2>Acessar Outras Páginas</h2>
+        <div class="nav-buttons">
+            <button onclick="window.location.href = 'https://webapptech00.azurewebsites.net';">Clientes</button>
+            <button onclick="window.location.href = 'https://webapptech01.azurewebsites.net';">Produtos</button>
+            <button onclick="window.location.href = 'https://webapptech03.azurewebsites.net';">Vendas</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Minha Primeira Página Web</p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username && password) {
+                alert('Login bem-sucedido!');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+</body>
+</html>
